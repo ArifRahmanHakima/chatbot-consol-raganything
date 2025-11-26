@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+raganything[all]
+redis
+python-dotenv
+transformers
+sentence-transformers
+torch

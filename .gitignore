@@ -1,0 +1,30 @@
+# Ignore Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Ignore virtual environments
+.venv/
+env/
+ENV/
+venv/
+
+# Ignore environment files (API keys, secrets)
+.env
+.env.*
+
+# Ignore RAGAnything outputs
+rag_storage/
+output/
+mineru_cache/
+magic-pdf/
+*.log
+
+# Ignore datasets or input files
+data/*.pdf
+
+# Ignore IDE config
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
