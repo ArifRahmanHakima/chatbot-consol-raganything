@@ -1,8 +1,14 @@
-fastapi
-uvicorn
 raganything[all]
-redis
-python-dotenv
-transformers
+lightrag-hku[api]
+
+chromadb
 sentence-transformers
+python-dotenv
+
+# Reranker
+transformers
 torch
+scikit-learn
+
+# Optional
+redis

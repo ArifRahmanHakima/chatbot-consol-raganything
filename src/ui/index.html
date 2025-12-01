@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot JDIH JogjaProv</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="header-content">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+          <div class="avatar">
+            <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+              <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div style="flex: 1;">
+            <div style="font-size: 18px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.01em;">
+              JDIH JogjaProv Assistant
+              <p style="font-size: 13px; opacity: 0.95; line-height: 1.5;">
+                Asisten cerdas untuk dokumen hukum dan peraturan daerah
+              </p>
+            </div>
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span style="font-weight: 600;">Online</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Messages Area -->
+    <div id="chatMessages" class="chat-messages">
+      <div id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-icon">
+          <svg width="52" height="52" fill="white" viewBox="0 0 24 24">
+            <path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="welcome-title">
+          Selamat Datang! 👋
+        </h2>
+        <p class="welcome-text">
+          Silakan tanyakan informasi tentang dokumen hukum<br>dan peraturan daerah yang Anda butuhkan
+        </p>
+      </div>
+      <div id="messagesContainer" class="messages-hidden"></div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input-area">
+      <div class="input-wrapper">
+        <textarea 
+          id="chatInput" 
+          class="chat-input"
+          placeholder="Ketik pertanyaan Anda..."
+          rows="1"
+        ></textarea>
+        <button id="sendButton" class="send-button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,7 +1,9 @@
 import asyncio
 import sys
-from rag_config import get_rag
+from src.config.rag_config import get_rag
 from datetime import datetime
+from src.config.reranker import rerank_results
+from lightrag.base import QueryParam
 
 
 # Warna (ANSI escape codes — opsional)
@@ -33,7 +35,7 @@ async def main():
     try:
         log_info("📦 Memuat data dari rag_storage...")
         await rag.process_document_complete(
-            file_path="data/datadata.pdf",
+            file_path="data/jdih.pdf",
             output_dir="rag_storage",
             parse_method="auto",
             display_stats=False
@@ -62,7 +64,8 @@ async def main():
             result = await rag.aquery(
                 question,
                 mode="local",
-                vlm_enhanced=False
+                vlm_enhanced=False,
+                top_k=5
             )
 
             print(f"{Style.GREEN}💡 Jawaban:\n{Style.RESET}{result.strip()}\n")

@@ -1,18 +1,19 @@
-# ingest_pipeline.py
-
 import asyncio
 import sys
-from rag_config import get_rag
+from src.config.rag_config import get_rag
 
 async def main():
     rag = get_rag()
 
     try:
-        print("📄 Memproses dokumen: data/datadata.pdf")
+        print("📄 Memproses dokumen: data/jdih.pdf")
+        
+        # Proses dokumen
         await rag.process_document_complete(
-            file_path="data/datadata.pdf",
+            file_path="data/jdih.pdf",
             output_dir="rag_storage"
         )
+        
         print("✅ Dokumen berhasil diproses!\n")
     except Exception as e:
         print(f"❌ ERROR saat parsing: {e}")
